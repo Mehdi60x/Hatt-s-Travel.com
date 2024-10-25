@@ -627,8 +627,6 @@ header .menu.responsive {
     background-color: #dddddd;
     align-items: unset;
     animation: animate-menu 1s forwards;
-   
-    
 }
 
 header .menu.responsive li {
@@ -649,7 +647,7 @@ header .menu.responsive li {
    
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 1133px) {
     html {
         font-size: 58%;
     }
@@ -682,9 +680,6 @@ header .menu.responsive li {
         justify-content: space-between;
         margin-inline: 20px;
     }
-
- 
-
     .img-desc .left,
     .img-desc .right {
         flex-direction: column;
@@ -695,19 +690,72 @@ header .menu.responsive li {
     .img-desc .right h3 {
         font-size: 22px;
     }
-}
+     .responsive-menu{
+            align-items: center;
+            display: none;
+        }
+     header .menu.responsive li {
+            margin: 20px;
+            width: 100px;
+            padding-left: 20px;
+            display: none;
+        }
+        
+      }
 
-@media (max-width: 768px) {
-    /* html {
-        font-size: 55%;
-    } */
+
+@media (max-width: 769px) {
+
     .responsive-menu {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        color: #0c0b0b;
+        margin-bottom: 10px;
+    }
+
+    .responsive-menu::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        background-color: white;
+        width: 28px;
+        box-shadow: 0 10px 0 white;
+        transform: translateY(-10px);
+        transition: 0.5s;
+        
+    }
+    
+    .responsive-menu.active::after{
+        box-shadow: 0 0 0 white;
+        transform: rotate(45deg);
+    }
+    
+    .responsive-menu.active::before {
+        transform: rotate(-45deg);
+    }
+    header .menu.responsive {
+        display: flex;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        flex-direction: column;
+        background-color: #dddddd;
+        align-items: unset;
+        animation: animate-menu 1s forwards;
+    }
+    
+    header .menu.responsive li {
+        margin: 20px;
+        width: 100px;
+        padding-left: 20px;
         display: block;
+        
     }
     .menu li {
-        display: none;
-    }
-    .btn-reservation nav {
         display: none;
     }
     header .logo a .p{
@@ -788,6 +836,16 @@ header .menu.responsive li {
         align-items: stretch;
     }
 
+    header .menu.responsive li {
+        margin: 20px;
+        width: 100px;
+        padding-left: 20px;
+        display: block;
+        
+    }
+    .menu li {
+        display: none;
+    }
     .responsive-menu {
         display: block;
     }
@@ -805,3 +863,62 @@ header .menu.responsive li {
         text-align: center;
     }
 }
+
+@media (max-width: 499px) {
+    html {
+        font-size: 50%;
+    }
+
+    .responsive-menu {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        color: #0c0b0b;
+        margin-bottom: 10px;
+    }
+
+    .responsive-menu::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        background-color: white;
+        width: 28px;
+        box-shadow: 0 10px 0 white;
+        transform: translateY(-10px);
+        transition: 0.5s;
+        
+    }
+    
+    .responsive-menu.active::after{
+        box-shadow: 0 0 0 white;
+        transform: rotate(45deg);
+    }
+    
+    .responsive-menu.active::before {
+        transform: rotate(-45deg);
+    }
+    header .menu.responsive {
+        display: flex;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        flex-direction: column;
+        background-color: #dddddd;
+        align-items: unset;
+        animation: animate-menu 1s forwards;
+    }
+header .menu.responsive li {
+    margin: 20px;
+    width: 100px;
+    padding-left: 20px;
+    display: block;
+    
+}
+.menu li {
+    display: none;
+}
+
+ }
